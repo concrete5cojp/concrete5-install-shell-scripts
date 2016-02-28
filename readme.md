@@ -65,7 +65,7 @@ https://concrete5.co.jp/
 
 下記の方法で、Cloud9 のコマンドを実行してください。テキストファイルの変更も必要です。
 
-- コマンド `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash` を実行
+- コマンド `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash` を実行
 - 下記のコマンドをコピーして、コマンドウインドウでそのまま実行してください。 (最後の`exit;` をきちんと *改行* して ** MySQL を終了してください)
 ```
 mysql-ctl start
