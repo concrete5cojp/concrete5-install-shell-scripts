@@ -7,7 +7,7 @@ Japanese instruction follows English instruction.
 
 日本語の解説は、英語の後に
 
-## Instruction of cloud 9
+## Installing to Cloud9
 
 Run the following commands and modify the config from Cloud9
 
