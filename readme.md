@@ -22,7 +22,7 @@ FLUSH PRIVILEGES;
 exit;
 
 ```
-- Open the install.cloud9.bash into Cloud9 editor and modify the admin email, admin password or other preferences if you wish. See the config section below.
+- Open the install.cloud9.bash into Cloud9 editor and modify the admin email, admin password, site name or other preferences if you wish. See the config section below.
 - `chmod 700 install.cloud9.bash`
 - `bash install.cloud9.bash`
 
@@ -76,7 +76,7 @@ FLUSH PRIVILEGES;
 exit;
 
 ```
-- 「instal.cloud9.bash」ファイルを Cloud9 のテキストエディタで開いて `ADMIN_EMAIL` (自分のメールアドレス), `ADMIN_PASS` (admin ユーザーのパスワード) や他の設定情報を変更してください。下記に設定項目の説明があります。
+- 「instal.cloud9.bash」ファイルを Cloud9 のテキストエディタで開いて `ADMIN_EMAIL` (自分のメールアドレス), `ADMIN_PASS` (admin ユーザーのパスワード) , `SITE_NAME` (サイト名) や他の設定情報を変更してください。下記に設定項目の説明があります。
 - コマンド `chmod 700 install.cloud9.bash` を実行
 - コマンド `bash install.cloud9.bash` を実行
 
