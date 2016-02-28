@@ -56,7 +56,7 @@ mv index.html concrete5.zip
 unzip concrete5.zip
 mv ${DESTINATION}/${CONCRETE5_VERSION}/* ${DESTINATION}/
 chmod 755 concrete/bin/concrete5
-concrete/bin/concrete5 c5:install --db-server=${MYSQL_SERVER} --db-username=${MYSQL_USER} --db-password=${MYSQL_PASSWORD} --db-database=${MYSQL_DATABASE} --site="${SITE_NAME}" --starting-point=${SAMPLE_DATA} --admin-email=${ADMIN_EMAIL} --admin-password="${ADMIN_PASS}"
+concrete/bin/concrete5 c5:install --db-server=${MYSQL_SERVER} --db-username=${MYSQL_USER} --db-password=${MYSQL_PASS} --db-database=${MYSQL_DATABASE} --site="${SITE_NAME}" --starting-point=${SAMPLE_DATA} --admin-email=${ADMIN_EMAIL} --admin-password="${ADMIN_PASS}"
 curl ${CONCRETE_PHP_RAW} > ${DESTINATION}/application/config/concrete.php
 rm -f concrete5.zip
 rm -rf ${CONCRETE5_VERSION}*
