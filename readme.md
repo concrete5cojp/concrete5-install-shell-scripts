@@ -1,13 +1,14 @@
 # concrete5 easy install shell script
 
-This is the easy to use install script.
-I've first made one for Cloud9.
+This is the easy to use install script. I've first made one for Cloud9.
 
 Japanese instruction follows English instruction.
 
 日本語の解説は、英語の後に
 
 ## Installing to Cloud9
+
+I assume you already know how to use Cloud9. If not, [sign up](https://c9.io/c/t3lGIvLecba) and read [their doc](https://docs.c9.io/docs) for the detail.
 
 Run the following commands and modify the config from Cloud9
 
@@ -64,6 +65,11 @@ concrete5 Japan, Inc. is helping various company's concrete5 project. Please fee
 
 https://concrete5.co.jp/
 
+## 日本語
+
+日本語での説明はこちらです。 Cloud9 の基本操作はすでに知っている方向けに書いています。そうでない方は、まず、[Cloud9に登録して](https://c9.io/c/t3lGIvLecba)、こちらの記事を読むのをお勧めします。
+
+- [プログラミングの開発環境に便利！Cloud9の使い方 | TechAcademyマガジン](http://techacademy.jp/magazine/6168)
 
 ### 使用方法
 
