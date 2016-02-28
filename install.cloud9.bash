@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-# concrete5 backup shell:
+# concrete5 Installation Shell to Cloud9:
 # ----------
-# Version 0.1
+# Version 0.2
 # By katzueno
 
 # INSTRUCTION:
