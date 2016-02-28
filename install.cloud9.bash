@@ -34,9 +34,9 @@ INSTALL_PHPMYADMIN="yes"
 
 cd ${DESTINATION}
 # mysql-ctl start
-# if [ "$INSTALL_PHPMYADMIN" = "yes" ]; then
-#     phpmyadmin-ctl install
-# fi
+if [ "$INSTALL_PHPMYADMIN" = "yes" ]; then
+    phpmyadmin-ctl install
+fi
 # expect -c "
 # set timeout 60
 # spawn mysql
