@@ -9,10 +9,10 @@ Japanese instruction follows English instruction.
 
 ## Instruction of cloud 9
 
-Run the following command and modify the config from Cloud9
+Run the following commands and modify the config from Cloud9
 
-1. `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash`
-2. Copy and paste the following command within Cloud9 command window. (Make sure to *return* the `exit;` to exit MySQL)
+- `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash`
+- Copy and paste the following command within Cloud9 command window. (Make sure to *return* the `exit;` to exit MySQL)
 ```
 mysql-ctl start
 mysql-ctl cli
@@ -22,9 +22,9 @@ FLUSH PRIVILEGES;
 exit;
 
 ```
-3. Open the install.cloud9.bash into Cloud9 editor and modify the MySQL Username, admin email, admin password or other preferences if you wish. See the config section below.
-4. `chmod 700 install.cloud9.bash`
-5. `bash install.cloud9.bash`
+- Open the install.cloud9.bash into Cloud9 editor and modify the MySQL Username, admin email, admin password or other preferences if you wish. See the config section below.
+- `chmod 700 install.cloud9.bash`
+- `bash install.cloud9.bash`
 
 **CAUTION: YOU MUST change your password** If you run a lot of concrete5 installs, I recommend you to fork this Git onto your private repo.
 
@@ -65,8 +65,8 @@ https://concrete5.co.jp/
 
 下記の方法で、Cloud9 のコマンドを実行してください。テキストファイルの変更も必要です。
 
-1. コマンド `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash` を実行
-2. 下記のコマンドをコピーして、コマンドウインドウでそのまま実行してください。 (最後の`exit;` をきちんと *改行* して ** MySQL を終了してください)
+- コマンド `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash` を実行
+- 下記のコマンドをコピーして、コマンドウインドウでそのまま実行してください。 (最後の`exit;` をきちんと *改行* して ** MySQL を終了してください)
 ```
 mysql-ctl start
 mysql-ctl cli
@@ -76,9 +76,9 @@ FLUSH PRIVILEGES;
 exit;
 
 ```
-2. 「instal.cloud9.bash」ファイルを Cloud9 のテキストエディタで開いて `MYSQL_USER` (Cloud9 のユーザ名), `ADMIN_EMAIL` (自分のメールアドレス), `ADMIN_PASS` (admin ユーザーのパスワード) や他の設定情報を変更してください。下記に設定項目の説明があります。
-3. コマンド `chmod 700 install.cloud9.bash` を実行
-4. コマンド `bash install.cloud9.bash` を実行
+- 「instal.cloud9.bash」ファイルを Cloud9 のテキストエディタで開いて `MYSQL_USER` (Cloud9 のユーザ名), `ADMIN_EMAIL` (自分のメールアドレス), `ADMIN_PASS` (admin ユーザーのパスワード) や他の設定情報を変更してください。下記に設定項目の説明があります。
+- コマンド `chmod 700 install.cloud9.bash` を実行
+- コマンド `bash install.cloud9.bash` を実行
 
 
 **注意: パスワードは変えてください。** 必要ならこの Git をプライベートレポジトリに Fork することをお勧めします。
