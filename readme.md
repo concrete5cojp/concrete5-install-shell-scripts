@@ -4,7 +4,7 @@ This is the easy to use install script. I've first made one for Cloud9.
 
 Japanese instruction follows English instruction.
 
-日本語の解説は、英語の後に
+[日本語の解説](#日本語)は、英語の後にございます。
 
 ## Installing to Cloud9
 
