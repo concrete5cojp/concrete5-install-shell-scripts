@@ -1,4 +1,4 @@
-# concrete5 easy install shell script
+# concrete5 Easy Install Shell Script for Cloud9
 
 This is the easy to use install script. I've first made one for Cloud9.
 
@@ -82,7 +82,7 @@ https://concrete5.co.jp/
 下記の方法で、Cloud9 のコマンドを実行してください。テキストファイルの変更も必要です。
 
 - Cloud9 の管理画面から `Create a new workspace` をクリックし、PHP, Apache, MySQL テンプレートを選択して、Workspace を作成します。
-- 下記のコマンドをコピーして、コマンドウインドウでそのまま実行してください。 (最後の`exit;` をきちんと *改行* して ** MySQL を終了してください)
+- 下記のコマンドをコピーして、コマンドウインドウでそのまま実行してください。 (最後の`exit;` をきちんと *改行* し MySQL を終了してください)。このコマンドで MySQL ユーザー「concrete5」とパスワード「concrete5」を設定します。
 ```
 mysql-ctl start
 mysql-ctl cli
