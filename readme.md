@@ -38,8 +38,8 @@ ADMIN_EMAIL         | "concrete5@example.com" | Change it to your email address
 ADMIN_PASS          | "t4wbSIDuQgfy" | **IMPORTANT!** This is your concrete5's admin password. So make sure to change it.
 SITE_NAME           | "concrete5 demo" | concrete5 site name.
 SAMPLE_DATA         | "elemental_full" | If you want to install the blank sample data, use "elemental_blank"
-MYSQL_USER          | "CLOUD9USERNAME" | You MUST change it to your cloud9 username
-MYSQL_PASS          | ""    | You can leave it to blank if you wish to use the default MySQL
+MYSQL_USER          | "concrete5" | You need to create the MySQL User.
+MYSQL_PASS          | "concrete5" | You need to create the MySQL Password
 MYSQL_SERVER        | "127.0.0.1" | MySQL Server Address
 MYSQL_DATABASE      | "c9" | MySQL Database Name
 CONCRETE5_DOWNLOAD  | "http://www.concrete5.org/download_file/-/view/85780/" | This is download URL of concrete5 zip file
@@ -95,8 +95,8 @@ ADMIN_EMAIL         | "concrete5@example.com" | 自分のメールアドレス�
 ADMIN_PASS          | "t4wbSIDuQgfy" | **重要!** これは concrete5 の「admin」のパスワードです。必ず変更してください。
 SITE_NAME           | "concrete5 demo" | concrete5 サイト名です。
 SAMPLE_DATA         | "elemental_full" | Elemental のサンプルコンテンツをインストールします。空白のサイトを希望する場合は "elemental_blank" と入力してください。
-MYSQL_USER          | "CLOUD9USERNAME" | 自分の Cloud9 のユーザー名に変更してください。
-MYSQL_PASS          | ""    | Cloud9 のデフォルトでは MySQL のパスワードはないので空白のままでOKです。
+MYSQL_USER          | "concrete5" | You need to create the MySQL User.
+MYSQL_PASS          | "concrete5" | You need to create the MySQL Password
 MYSQL_SERVER        | "127.0.0.1" | MySQL サーバーのアドレスです。
 MYSQL_DATABASE      | "c9" | MySQL データベース名です。
 CONCRETE5_DOWNLOAD  | "http://www.concrete5.org/download_file/-/view/85780/" | これは concrete5 本体パッケージのダウンロード先 URL です。
