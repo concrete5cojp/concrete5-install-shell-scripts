@@ -12,7 +12,7 @@ Japanese instruction follows English instruction.
 Run the following commands and modify the config from Cloud9
 
 - Create a new workspace using PHP, Apache, MySQL template.
-- `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash`
+- Run `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash`
 - Copy and paste the following command within Cloud9 command window. (Make sure to *return* the `exit;` to exit MySQL)
 ```
 mysql-ctl start
@@ -24,8 +24,11 @@ exit;
 
 ```
 - Open the install.cloud9.bash into Cloud9 editor and modify the admin email, admin password, site name or other preferences if you wish. See the config section below.
-- `chmod 700 install.cloud9.bash`
-- `bash install.cloud9.bash`
+- Run 
+    - `chmod 700 install.cloud9.bash`
+    - `bash install.cloud9.bash`
+- Click "Run Project" to start a Apache server
+- DONE
 
 **CAUTION: YOU MUST change your password** If you run a lot of concrete5 installs, I recommend you to fork this Git onto your private repo.
 
@@ -79,8 +82,10 @@ exit;
 
 ```
 - 「instal.cloud9.bash」ファイルを Cloud9 のテキストエディタで開いて `ADMIN_EMAIL` (自分のメールアドレス), `ADMIN_PASS` (admin ユーザーのパスワード) , `SITE_NAME` (サイト名) や他の設定情報を変更してください。下記に設定項目の説明があります。
-- コマンド `chmod 700 install.cloud9.bash` を実行
-- コマンド `bash install.cloud9.bash` を実行
+- 下記のコマンドを実行
+    - `chmod 700 install.cloud9.bash`
+    - `bash install.cloud9.bash`
+- "Run Project"ボタンを押して、Apache サーバーを起動し、concrete5 にアクセス
 
 
 **注意: パスワードは変えてください。** 必要ならこの Git をプライベートレポジトリに Fork することをお勧めします。
