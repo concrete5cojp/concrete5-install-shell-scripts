@@ -13,8 +13,7 @@ I assume you already know how to use Cloud9. If not, [sign up](https://c9.io/c/t
 Run the following commands and modify the config from Cloud9
 
 - Create a new workspace using PHP, Apache, MySQL template.
-- Run `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash`
-- Copy and paste the following command within Cloud9 command window. (Make sure to *return* the `exit;` to exit MySQL)
+- Copy and paste the following command within Cloud9 command window. (Make sure to *return* the `exit;` to exit MySQL). This commands will start MySQL and create a MySQL user, `concrete5`, with password, `concrete5`.
 ```
 mysql-ctl start
 mysql-ctl cli
@@ -24,10 +23,17 @@ FLUSH PRIVILEGES;
 exit;
 
 ```
-- Open the install.cloud9.bash into Cloud9 editor and modify the admin email, admin password, site name or other preferences if you wish. See the config section below.
-- Run 
-    - `chmod 700 install.cloud9.bash`
-    - `bash install.cloud9.bash`
+- Obtain the `instal.cloud9.bash` script and modify it according to your preference. I recommend you to change `ADMIN_EMAIL` (Your concrete5's admin email address), `ADMIN_PASS` (concrete5's admin password) , `SITE_NAME` (concrete5's site name). Check out the config option tabel below. Then saved it on remote server such as your own GitHub repo or Gist, or saved it onto Cloud9.
+- Run the installation command
+    - *Option 1.* Run the remote script directly
+        - Format: `curl [URL to script] | bash`
+        - E.g., `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash | bash` (FYI, I don't recommend to run the my script directly.)
+    - *Option 2.* Get remote bash and run it locally
+        - Run `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash`
+        - Open the install.cloud9.bash into Cloud9 editor and modify the admin email, admin password, site name or other preferences if you wish. See the config section below.
+        - Run 
+            - `chmod 700 install.cloud9.bash`
+            - `bash install.cloud9.bash`
 - Click "Run Project" to start a Apache server
 - DONE
 
@@ -76,7 +82,6 @@ https://concrete5.co.jp/
 下記の方法で、Cloud9 のコマンドを実行してください。テキストファイルの変更も必要です。
 
 - Cloud9 の管理画面から `Create a new workspace` をクリックし、PHP, Apache, MySQL テンプレートを選択して、Workspace を作成します。
-- コマンド `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash` を実行
 - 下記のコマンドをコピーして、コマンドウインドウでそのまま実行してください。 (最後の`exit;` をきちんと *改行* して ** MySQL を終了してください)
 ```
 mysql-ctl start
@@ -87,11 +92,18 @@ FLUSH PRIVILEGES;
 exit;
 
 ```
-- 「instal.cloud9.bash」ファイルを Cloud9 のテキストエディタで開いて `ADMIN_EMAIL` (自分のメールアドレス), `ADMIN_PASS` (admin ユーザーのパスワード) , `SITE_NAME` (サイト名) や他の設定情報を変更してください。下記に設定項目の説明があります。
-- 下記のコマンドを実行
-    - `chmod 700 install.cloud9.bash`
-    - `bash install.cloud9.bash`
+- 「instal.cloud9.bash」ファイルをテキストエディタで開いて `ADMIN_EMAIL` (自分のメールアドレス), `ADMIN_PASS` (admin ユーザーのパスワード) , `SITE_NAME` (サイト名) や他の設定情報を変更してください。下記に設定項目の説明があります。この Bash ファイルを、自分の GitHub のレポジトリや Gist などに保存するか、Cloud9 のファイルマネージャーに保存します。
+- インストールコマンドを実行
+    - *オプション1* リモートにスクリプトを置いて実行する場合
+        - フォーマット: `curl [URL to script] | bash`
+        - サンプル: `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash | bash` (ただし、このコマンドを直接実行するのはお勧めできません。)
+    - *オプション2* ローカルにスクリプトを取得して実行する場合
+        - コマンド `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash` を実行
+        - 下記のコマンドを実行
+            - `chmod 700 install.cloud9.bash`
+            - `bash install.cloud9.bash`
 - "Run Project"ボタンを押して、Apache サーバーを起動し、concrete5 にアクセス
+- インストール完了
 
 
 **注意: パスワードは変えてください。** 必要ならこの Git をプライベートレポジトリに Fork することをお勧めします。
