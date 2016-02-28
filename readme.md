@@ -11,6 +11,7 @@ Japanese instruction follows English instruction.
 
 Run the following commands and modify the config from Cloud9
 
+- Create a new workspace using PHP, Apache, MySQL template.
 - `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash`
 - Copy and paste the following command within Cloud9 command window. (Make sure to *return* the `exit;` to exit MySQL)
 ```
@@ -65,6 +66,7 @@ https://concrete5.co.jp/
 
 下記の方法で、Cloud9 のコマンドを実行してください。テキストファイルの変更も必要です。
 
+- Cloud9 の管理画面から `Create a new workspace` をクリックし、PHP, Apache, MySQL テンプレートを選択して、Workspace を作成します。
 - コマンド `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash` を実行
 - 下記のコマンドをコピーして、コマンドウインドウでそのまま実行してください。 (最後の`exit;` をきちんと *改行* して ** MySQL を終了してください)
 ```
