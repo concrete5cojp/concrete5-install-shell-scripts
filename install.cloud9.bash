@@ -7,7 +7,7 @@
 
 # INSTRUCTION:
 # ----------
-# https://github.com/katzueno/cloud9-concrete5-install-script
+# https://github.com/katzueno/concrete5-install-shell-scripts
 
 # USE IT AT YOUR OWN RISK!
 
@@ -22,7 +22,8 @@ CONCRETE5_DOWNLOAD="http://www.concrete5.org/download_file/-/view/85780/"
 CONCRETE5_VERSION="concrete5.7.5.6"
 SAMPLE_DATA="elemental_full"
 DESTINATION="~/workspace"
-CONCRETE_PHP_RAW="https://raw.githubusercontent.com/katzueno/cloud9-concrete5-install-script/master/config/concrete.php"
+CONCRETE_PHP_RAW="https://raw.githubusercontent.com/katzueno/cloud9-concrete5-install-script/master/config/cloud9.concrete.php"
+INSTALL_PHPMYADMIN="yes"
 
 
 # STARTS HERE
@@ -30,8 +31,9 @@ CONCRETE_PHP_RAW="https://raw.githubusercontent.com/katzueno/cloud9-concrete5-in
 
 cd ${DESTINATION}
 mysql-ctl start
-curl ${CONCRETE_PHP_RAW} > ${DESTINATION}/application/config/concrete.php
-phpmyadmin-ctl install
+if [ "$INSTALL_PHPMYADMIN" = "yes" ]; then
+    phpmyadmin-ctl install
+fi
 wget ${CONCRETE5_DOWNLOAD}
 mv index.html concrete5.zip
 unzip concrete5.zip
