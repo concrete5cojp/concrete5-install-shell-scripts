@@ -8,9 +8,13 @@ Japanese instruction follows English instruction.
 
 ## Installing to Cloud9
 
+### YouTube Turotial
+
 Video tutorial is now available!
 
 https://www.youtube.com/watch?v=zS-F4Yk4TQs
+
+### Instroduction
 
 I assume you already know how to use Cloud9. If not, [sign up](https://c9.io/c/t3lGIvLecba) and read [their doc](https://docs.c9.io/docs) for the detail.
 
@@ -77,6 +81,8 @@ https://concrete5.co.jp/
 日本語での説明はこちらです。 Cloud9 の基本操作はすでに知っている方向けに書いています。そうでない方は、まず、[Cloud9に登録して](https://c9.io/c/t3lGIvLecba)、こちらの記事を読むのをお勧めします。
 
 - [プログラミングの開発環境に便利！Cloud9の使い方 | TechAcademyマガジン](http://techacademy.jp/magazine/6168)
+
+### YouTube 動画
 
 YouTube に解説動画をアップロードしました。
 
