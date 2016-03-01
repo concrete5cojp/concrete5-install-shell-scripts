@@ -29,10 +29,7 @@ exit;
 ```
 - Obtain the `instal.cloud9.bash` script and modify it according to your preference. I recommend you to change `ADMIN_EMAIL` (Your concrete5's admin email address), `ADMIN_PASS` (concrete5's admin password) , `SITE_NAME` (concrete5's site name). Check out the config option tabel below. Then saved it on remote server such as your own GitHub repo or Gist, or saved it onto Cloud9.
 - Run the installation command
-    - *Option 1.* Run the remote script directly
-        - Format: `curl [URL to script] | bash`
-        - E.g., `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash | bash` (FYI, I don't recommend to run the my script directly.)
-    - *Option 2.* Get remote bash and run it locally
+    - Get remote bash and run it locally
         - Run `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash`
         - Open the install.cloud9.bash into Cloud9 editor and modify the admin email, admin password, site name or other preferences if you wish. See the config section below.
         - Run 
@@ -103,10 +100,7 @@ exit;
 ```
 - 「instal.cloud9.bash」ファイルをテキストエディタで開いて `ADMIN_EMAIL` (自分のメールアドレス), `ADMIN_PASS` (admin ユーザーのパスワード) , `SITE_NAME` (サイト名) や他の設定情報を変更してください。下記に設定項目の説明があります。この Bash ファイルを、自分の GitHub のレポジトリや Gist などに保存するか、Cloud9 のファイルマネージャーに保存します。
 - インストールコマンドを実行
-    - *オプション1* リモートにスクリプトを置いて実行する場合
-        - フォーマット: `curl [URL to script] | bash`
-        - サンプル: `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash | bash` (ただし、このコマンドを直接実行するのはお勧めできません。)
-    - *オプション2* ローカルにスクリプトを取得して実行する場合
+    - ローカルにスクリプトを取得して実行する
         - コマンド `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash` を実行
         - 下記のコマンドを実行
             - `chmod 700 install.cloud9.bash`
