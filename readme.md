@@ -8,6 +8,10 @@ Japanese instruction follows English instruction.
 
 ## Installing to Cloud9
 
+Video tutorial is now available!
+
+https://www.youtube.com/watch?v=zS-F4Yk4TQs
+
 I assume you already know how to use Cloud9. If not, [sign up](https://c9.io/c/t3lGIvLecba) and read [their doc](https://docs.c9.io/docs) for the detail.
 
 Run the following commands and modify the config from Cloud9
@@ -76,6 +80,11 @@ https://concrete5.co.jp/
 日本語での説明はこちらです。 Cloud9 の基本操作はすでに知っている方向けに書いています。そうでない方は、まず、[Cloud9に登録して](https://c9.io/c/t3lGIvLecba)、こちらの記事を読むのをお勧めします。
 
 - [プログラミングの開発環境に便利！Cloud9の使い方 | TechAcademyマガジン](http://techacademy.jp/magazine/6168)
+
+YouTube に解説動画をアップロードしました。
+
+https://www.youtube.com/watch?v=TPmUvPsgoOQ
+
 
 ### 使用方法
 
