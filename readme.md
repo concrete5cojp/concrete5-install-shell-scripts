@@ -106,11 +106,12 @@ exit;
 ```
 - 「instal.cloud9.bash」ファイルをテキストエディタで開いて `ADMIN_EMAIL` (自分のメールアドレス), `ADMIN_PASS` (admin ユーザーのパスワード) , `SITE_NAME` (サイト名) や他の設定情報を変更してください。下記に設定項目の説明があります。この Bash ファイルを、自分の GitHub のレポジトリや Gist などに保存するか、Cloud9 のファイルマネージャーに保存します。
 - インストールコマンドを実行
-    - ローカルにスクリプトを取得して実行する
+    - ローカルにスクリプトを取得して内容を変更する。
         - コマンド `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash` を実行
-        - 下記のコマンドを実行
-            - `chmod 700 install.cloud9.bash`
-            - `bash install.cloud9.bash`
+        - `install.cloud9.bash` ファイルを Cloud9 のテキストエディアで開いて、admin ユーザーのメールアドレス、パスワード、サイト名などを修正してください。
+   - 下記のコマンドを実行してインストールを実行する。
+        - `chmod 700 install.cloud9.bash`
+        - `bash install.cloud9.bash`
 - "Run Project"ボタンを押して、Apache サーバーを起動し、concrete5 にアクセス
 - インストール完了
 
