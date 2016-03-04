@@ -31,18 +31,20 @@ FLUSH PRIVILEGES;
 exit;
 
 ```
-- Obtain the `instal.cloud9.bash` script and modify it according to your preference. I recommend you to change `ADMIN_EMAIL` (Your concrete5's admin email address), `ADMIN_PASS` (concrete5's admin password) , `SITE_NAME` (concrete5's site name). Check out the config option tabel below. Then saved it on remote server such as your own GitHub repo or Gist, or saved it onto Cloud9.
-- Run the installation command
-    - Get remote bash and run it locally
-        - Run `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash`
+- Obtain the `instal.cloud9.bash` script and modify it according to your preference. I recommend you to change `ADMIN_EMAIL` (Your concrete5's admin email address), `ADMIN_PASS` (concrete5's admin password) , `SITE_NAME` (concrete5's site name). Check out the config option table below. Then saved it on remote server such as your own GitHub repo or Gist, or saved it onto Cloud9.
+- Run the installation using the following methods.
+    - (1) Get remote bash and run it locally
+        - Example: `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash`
         - Open the install.cloud9.bash into Cloud9 editor and modify the admin email, admin password, site name or other preferences if you wish. See the config section below.
         - Run 
             - `chmod 700 install.cloud9.bash`
             - `bash install.cloud9.bash`
+    - (2) Save your own `install.cloud9.bash` file remotely, fetch and run it remotely
+        - Example `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash | bash`
 - Click "Run Project" to start a Apache server
 - DONE
 
-**CAUTION: YOU MUST change your password** If you run a lot of concrete5 installs, I recommend you to fork this Git onto your private repo.
+**CAUTION: YOU MUST change your password** If you run a lot of concrete5 installs, I recommend you to fork this Git onto your private repo, or private Gist.
 
 ### Config Options
 
@@ -105,18 +107,21 @@ exit;
 
 ```
 - 「instal.cloud9.bash」ファイルをテキストエディタで開いて `ADMIN_EMAIL` (自分のメールアドレス), `ADMIN_PASS` (admin ユーザーのパスワード) , `SITE_NAME` (サイト名) や他の設定情報を変更してください。下記に設定項目の説明があります。この Bash ファイルを、自分の GitHub のレポジトリや Gist などに保存するか、Cloud9 のファイルマネージャーに保存します。
-- インストールコマンドを実行
-    - ローカルにスクリプトを取得して内容を変更する。
-        - コマンド `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash` を実行
+- 下記のいずれかの方法でインストールを実行します。
+    - (1) ローカルにスクリプトを取得して内容を変更したあと実行する
+        - コマンドを実行してファイルを取得する。
+            - 例: `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash` 
         - `install.cloud9.bash` ファイルを Cloud9 のテキストエディアで開いて、admin ユーザーのメールアドレス、パスワード、サイト名などを修正してください。
-   - 下記のコマンドを実行してインストールを実行する。
-        - `chmod 700 install.cloud9.bash`
-        - `bash install.cloud9.bash`
+        - 下記のコマンドを実行してインストールを実行する。
+            - `chmod 700 install.cloud9.bash`
+            - `bash install.cloud9.bash`
+    - (2) リモートに、内容を修正した `install.cloud9.bash` ファイルを保存し、それをを取得＆直接実行する
+        - 例: `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash | bash`
 - "Run Project"ボタンを押して、Apache サーバーを起動し、concrete5 にアクセス
 - インストール完了
 
 
-**注意: パスワードは変えてください。** 必要ならこの Git をプライベートレポジトリに Fork することをお勧めします。
+**注意: パスワードは変えてください。** シェルスクリプトをプライベートレポジトリやシークレットGistなどに Fork することをお勧めします。
 
 
 ### 設定オプション
