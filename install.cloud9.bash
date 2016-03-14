@@ -51,8 +51,7 @@ fi
 # }
 # interact
 # "
-wget ${CONCRETE5_DOWNLOAD}
-mv index.html concrete5.zip
+wget ${CONCRETE5_DOWNLOAD} -O concrete5.zip
 unzip concrete5.zip
 mv ${DESTINATION}/${CONCRETE5_VERSION}/* ${DESTINATION}/
 chmod 755 concrete/bin/concrete5
