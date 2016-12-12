@@ -56,6 +56,7 @@ ADMIN_EMAIL         | "concrete5@example.com" | Change it to your email address
 ADMIN_PASS          | "t4wbSIDuQgfy" | **IMPORTANT!** This is your concrete5's admin password. So make sure to change it.
 SITE_NAME           | "concrete5 demo" | concrete5 site name.
 SAMPLE_DATA         | "elemental_full" | If you want to install the blank sample data, use "elemental_blank"
+LOCALE              | "en_US" | Default locale of concrete5 when installing.
 MYSQL_USER          | "concrete5" | You need to create the MySQL User.
 MYSQL_PASS          | "concrete5" | You need to create the MySQL Password
 MYSQL_SERVER        | "127.0.0.1" | MySQL Server Address
@@ -135,6 +136,7 @@ ADMIN_EMAIL         | "concrete5@example.com" | 自分のメールアドレス�
 ADMIN_PASS          | "t4wbSIDuQgfy" | **重要!** これは concrete5 の「admin」のパスワードです。必ず変更してください。
 SITE_NAME           | "concrete5 demo" | concrete5 サイト名です。
 SAMPLE_DATA         | "elemental_full" | Elemental のサンプルコンテンツをインストールします。空白のサイトを希望する場合は "elemental_blank" と入力してください。
+LOCALE              | "en_US"     | インストール時のデフォルトロケールです。日本語にしたい場合は、"ja_JP" にしてください。
 MYSQL_USER          | "concrete5" | You need to create the MySQL User.
 MYSQL_PASS          | "concrete5" | You need to create the MySQL Password
 MYSQL_SERVER        | "127.0.0.1" | MySQL サーバーのアドレスです。

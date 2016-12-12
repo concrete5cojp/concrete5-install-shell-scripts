@@ -18,6 +18,7 @@ ADMIN_EMAIL="concrete5@example.com"
 ADMIN_PASS="t4wbSIDuQgfy"
 SITE_NAME="concrete5 Demo"
 SAMPLE_DATA="elemental_full"
+LOCALE="en_US"
 CONCRETE5_DOWNLOAD="http://www.concrete5.org/download_file/-/view/92910/"
 CONCRETE5_VERSION="concrete5-8.0.2"
 MYSQL_USER="concrete5"
@@ -37,7 +38,7 @@ wget ${CONCRETE5_DOWNLOAD} -O concrete5.zip
 unzip concrete5.zip
 mv ${DESTINATION}/${CONCRETE5_VERSION}/* ${DESTINATION}/
 chmod 755 concrete/bin/concrete5
-concrete/bin/concrete5 c5:install --db-server=${MYSQL_SERVER} --db-username=${MYSQL_USER} --db-password=${MYSQL_PASS} --db-database=${MYSQL_DATABASE} --site="${SITE_NAME}" --starting-point=${SAMPLE_DATA} --admin-email=${ADMIN_EMAIL} --admin-password="${ADMIN_PASS}"
+concrete/bin/concrete5 c5:install --db-server=${MYSQL_SERVER} --db-username=${MYSQL_USER} --db-password=${MYSQL_PASS} --db-database=${MYSQL_DATABASE} --site="${SITE_NAME}" --starting-point=${SAMPLE_DATA} --admin-email=${ADMIN_EMAIL} --admin-password="${ADMIN_PASS}" --site-locale="${LOCALE}"
 curl ${CONCRETE_PHP_RAW} > ${DESTINATION}/application/config/concrete.php
 rm -f concrete5.zip
 rm -rf ${CONCRETE5_VERSION}*
