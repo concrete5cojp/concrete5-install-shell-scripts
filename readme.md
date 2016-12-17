@@ -140,7 +140,7 @@ MYSQL_PASS          | "concrete5" | You need to create the MySQL Password
 MYSQL_SERVER        | "127.0.0.1" | MySQL サーバーのアドレスです。
 MYSQL_DATABASE      | "c9" | MySQL データベース名です。
 CONCRETE5_DOWNLOAD  | "http://www.concrete5.org/download_file/-/view/85780/" | これは concrete5 本体パッケージのダウンロード先 URL です。
-CONCRETE5_VERSION   | "concrete5.7.5.6" | 上記 concrete5 の ZIP ファイルを解答した時に生成されるフォルダ名です。
+CONCRETE5_VERSION   | "concrete5.7.5.13" | 上記 concrete5 の ZIP ファイルを解凍した時に生成されるフォルダ名です。
 DESTINATION         | "/home/ubuntu/workspace" | concrete5 のインストール先ディレクトリを指定します。デフォルトでは Cloud9 のトップディレクトリにインストールします。
 CONCRETE_PHP_RAW    | "https://raw.githubusercontent.com/katzueno/cloud9-concrete5-install-script/master/config/concrete.php" | Cloud9 で concrete5 を動かすための config ファイルです。詳細は[こちら](https://concrete5.co.jp/blog/cloud9-concrete5)をご覧ください。
 INSTALL_PHPMYADMIN  | "yes" | "yes" で phpMyAdmin をインストールします。必要なければコメントアウトするか、この行を削除してください。
