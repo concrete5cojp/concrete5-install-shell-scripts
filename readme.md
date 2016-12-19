@@ -31,7 +31,40 @@ FLUSH PRIVILEGES;
 exit;
 
 ```
+
+#### Install LEMP
+
+The script also installs LEMP (nginx, php7 with php-fpm) and replace the original Apache. It will run concrete5 much faster.
+
 - Obtain the `instal.cloud9.bash` script and modify it according to your preference. I recommend you to change `ADMIN_EMAIL` (Your concrete5's admin email address), `ADMIN_PASS` (concrete5's admin password) , `SITE_NAME` (concrete5's site name). Check out the config option table below. Then saved it on remote server such as your own GitHub repo or Gist, or saved it onto Cloud9.
+- Run the installation using the following methods.
+    - (1) Get remote bash and run it locally
+        - Example: `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash`
+        - Open the install.cloud9.bash into Cloud9 editor and modify the admin email, admin password, site name or other preferences if you wish. See the config section below.
+        - Run 
+            - `chmod 700 install.cloud9.bash`
+            - `bash install.cloud9.bash`
+    - (2) Save your own `install.cloud9.bash` file remotely, fetch and run it remotely
+        - Example `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash | bash`
+- DONE
+
+**You will not be able to use START and STOP button of Cloud9. You must type the following commands to control the web server**
+
+**CAUTION: YOU MUST change your password** If you run a lot of concrete5 installs, I recommend you to fork this Git onto your private repo, or private Gist.
+
+Command        | Description
+---------------|---------------------
+`lemp start`   | Starts Nginx and PHP
+`lemp stop`    | Stops Nginx and PHP
+`lemp restart` | Restarts Nginx and PHP
+`lemp status`  | Shows the current status
+
+
+#### Run without LEMP
+
+- Obtain the `instal.cloud9.bash` script and modify it according to your preference.
+    - Make sure to change `INSTALL_LEMP` option to `no`.
+    - I recommend you to change `ADMIN_EMAIL` (Your concrete5's admin email address), `ADMIN_PASS` (concrete5's admin password) , `SITE_NAME` (concrete5's site name). Check out the config option table below. Then saved it on remote server such as your own GitHub repo or Gist, or saved it onto Cloud9.
 - Run the installation using the following methods.
     - (1) Get remote bash and run it locally
         - Example: `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash`
@@ -52,6 +85,13 @@ Check where the VARIABLE in the  `install.cloud9.bash` script and change whereve
 
 Parameter           | Default Value | Description
 ----------          | ------------ | -----
+CONCRETE5_DOWNLOAD  | Please check | This is download URL of concrete5 zip file
+CONCRETE5_VERSION   | Please check | You MUST change it you are downloading the different version
+DESTINATION         | "/home/ubuntu/workspace" | This script will install onto the top directory of Cloud9. Change it if you wish to install onto different directory.
+CONCRETE_PHP_RAW    | "https://raw.githubusercontent.com/katzueno/cloud9-concrete5-install-script/master/config/concrete.php" | This is the special script to be able to run concrete5 on Cloud9. [Read here](https://www.concrete5.org/community/forums/installation/concrete5-on-cloud9/) for more detail.
+INSTALL_LEMP        | "yes" | "yes" to set up a LEMP environment using NGINX and PHP-FPM by using [c9-lemp](https://github.com/GabrielGil/c9-lemp) script. This will take some time to complete.
+INSTALL_PHPMYADMIN  | "yes" | "yes" to install phpMyAdmin. Remove this line if you don't want to.
+INSTALL_CONCRETE5   | "no" | "yes" to run concrete5 install command to install concrete5, and fill out the options below.
 ADMIN_EMAIL         | "concrete5@example.com" | Change it to your email address
 ADMIN_PASS          | "t4wbSIDuQgfy" | **IMPORTANT!** This is your concrete5's admin password. So make sure to change it.
 SITE_NAME           | "concrete5 demo" | concrete5 site name.
@@ -60,11 +100,7 @@ MYSQL_USER          | "concrete5" | You need to create the MySQL User.
 MYSQL_PASS          | "concrete5" | You need to create the MySQL Password
 MYSQL_SERVER        | "127.0.0.1" | MySQL Server Address
 MYSQL_DATABASE      | "c9" | MySQL Database Name
-CONCRETE5_DOWNLOAD  | "http://www.concrete5.org/download_file/-/view/85780/" | This is download URL of concrete5 zip file
-CONCRETE5_VERSION   | "concrete5.7.5.6" | You MUST change it you are downloading the different version
-DESTINATION         | "/home/ubuntu/workspace" | This script will install onto the top directory of Cloud9. Change it if you wish to install onto different directory.
-CONCRETE_PHP_RAW    | "https://raw.githubusercontent.com/katzueno/cloud9-concrete5-install-script/master/config/concrete.php" | This is the special script to be able to run concrete5 on Cloud9. [Read here](https://www.concrete5.org/community/forums/installation/concrete5-on-cloud9/) for more detail.
-INSTALL_PHPMYADMIN  | "yes" | "yes" to install phpMyAdmin. Remove this line if you don't want to.
+CONCRETE5_LOCALE    | "en_US" | **This option doesn't work yet for Cloud9.** Indicate the concrete5's default locale on install. You MUST specify the default locale when installing concrete5 since Ver 8.0.0 if you want to set the default locale rather than en_US.
 
 ## License
 
@@ -131,6 +167,13 @@ exit;
 
 パラメーター        | デフォルト値 | 説明
 ----------          | ------------ | -----
+CONCRETE5_DOWNLOAD  | "http://www.concrete5.org/download_file/-/view/85780/" | これは concrete5 本体パッケージのダウンロード先 URL です。
+CONCRETE5_VERSION   | "concrete5.7.5.6" | 上記 concrete5 の ZIP ファイルを解答した時に生成されるフォルダ名です。
+DESTINATION         | "/home/ubuntu/workspace" | concrete5 のインストール先ディレクトリを指定します。デフォルトでは Cloud9 のトップディレクトリにインストールします。
+CONCRETE_PHP_RAW    | "https://raw.githubusercontent.com/katzueno/cloud9-concrete5-install-script/master/config/concrete.php" | Cloud9 で concrete5 を動かすための config ファイルです。詳細は[こちら](https://concrete5.co.jp/blog/cloud9-concrete5)をご覧ください。
+INSTALL_LEMP        | "yes" | 「yes」で[c9-lemp](https://github.com/GabrielGil/c9-lemp) というスクリプトを実行して Cloud9 に LEMP 環境 (nginx, PHP-FPM, PHP7) を構築します。セットアップに少々時間がかかります。
+INSTALL_PHPMYADMIN  | "yes" | "yes" で phpMyAdmin をインストールします。必要なければコメントアウトするか、この行を削除してください。
+INSTALL_CONCRETE5   | "no" | **Cloud9でロケールの設定がうまくできないため、No にしています** 「yes」 で concrete5 のインストールコマンドを自動的に実行します。ファイルのインストール後、インストール画面よりインストールしてください。下記のパラメータはインストールコマンドを実行するときのみに使われます。
 ADMIN_EMAIL         | "concrete5@example.com" | 自分のメールアドレスに変更してください。
 ADMIN_PASS          | "t4wbSIDuQgfy" | **重要!** これは concrete5 の「admin」のパスワードです。必ず変更してください。
 SITE_NAME           | "concrete5 demo" | concrete5 サイト名です。
@@ -139,11 +182,7 @@ MYSQL_USER          | "concrete5" | You need to create the MySQL User.
 MYSQL_PASS          | "concrete5" | You need to create the MySQL Password
 MYSQL_SERVER        | "127.0.0.1" | MySQL サーバーのアドレスです。
 MYSQL_DATABASE      | "c9" | MySQL データベース名です。
-CONCRETE5_DOWNLOAD  | "http://www.concrete5.org/download_file/-/view/85780/" | これは concrete5 本体パッケージのダウンロード先 URL です。
-CONCRETE5_VERSION   | "concrete5.7.5.6" | 上記 concrete5 の ZIP ファイルを解答した時に生成されるフォルダ名です。
-DESTINATION         | "/home/ubuntu/workspace" | concrete5 のインストール先ディレクトリを指定します。デフォルトでは Cloud9 のトップディレクトリにインストールします。
-CONCRETE_PHP_RAW    | "https://raw.githubusercontent.com/katzueno/cloud9-concrete5-install-script/master/config/concrete.php" | Cloud9 で concrete5 を動かすための config ファイルです。詳細は[こちら](https://concrete5.co.jp/blog/cloud9-concrete5)をご覧ください。
-INSTALL_PHPMYADMIN  | "yes" | "yes" で phpMyAdmin をインストールします。必要なければコメントアウトするか、この行を削除してください。
+CONCRETE5_LOCALE    | "en_US" | **Cloud9 では正常に動きません。** concrete5 インストール時のデフォルトのロケールを入力してください。8.0.0 以降では英語以外のロケールをデフォルトとしてインストールするために必須となります。
 
 ## クレジット
 
