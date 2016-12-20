@@ -22,6 +22,7 @@ Run the following commands and modify the config from Cloud9
 
 - Create a new workspace using PHP, Apache, MySQL template.
 - Copy and paste the following command within Cloud9 command window. (Make sure to *return* the `exit;` to exit MySQL). This commands will start MySQL and create a MySQL user, `concrete5`, with password, `concrete5`.
+
 ```
 mysql-ctl start
 mysql-ctl cli
@@ -108,11 +109,18 @@ This script is released under MIT License.
 
 ## Credit
 
-@katzueno (concret5 Japan, Inc.)
+@katzueno ([concret5 Japan, Inc.](https://concrete5.co.jp/))
 
 concrete5 Japan, Inc. is helping various company's concrete5 project. Please feel free to contact us at any time for your project needs. We can work internationally.
 
-https://concrete5.co.jp/
+[c9-lemp](https://github.com/GabrielGil/c9-lemp)
+
+c9-lemp holds all the script, config files and commands that you might want to use to set up a LEMP environment using NGINX and PHP-FPM instead the default Apache2 runner for PHP applications on Cloud9 workspaces.
+
+[c9-lemp](https://github.com/GabrielGil/c9-lemp)
+
+c9-lemp は Cloud9 環境で、LEMP を立ち上げるためのインストールコマンドなどが全て揃ったスクリプトです。
+
 
 ## 日本語
 
@@ -133,6 +141,7 @@ https://www.youtube.com/watch?v=TPmUvPsgoOQ
 
 - Cloud9 の管理画面から `Create a new workspace` をクリックし、PHP, Apache, MySQL テンプレートを選択して、Workspace を作成します。
 - 下記のコマンドをコピーして、コマンドウインドウでそのまま実行してください。 (最後の`exit;` をきちんと *改行* し MySQL を終了してください)。このコマンドで MySQL ユーザー「concrete5」とパスワード「concrete5」を設定します。
+
 ```
 mysql-ctl start
 mysql-ctl cli
