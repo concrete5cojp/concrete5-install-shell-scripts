@@ -64,6 +64,8 @@ Command        | Description
 `lemp restart` | Restarts Nginx and PHP
 `lemp status`  | Shows the current status
 
+*The access URL will be the same as before which is [workspace name]-[user name]-c9users.io です。
+
 
 #### Run without LEMP
 
@@ -187,10 +189,12 @@ exit;
 
 コマンド       | 説明
 ---------------|---------------------
-`lemp start`   | Starts Nginx and PHP
-`lemp stop`    | Stops Nginx and PHP
-`lemp restart` | Restarts Nginx and PHP
-`lemp status`  | Shows the current status
+`lemp start`   | Web サーバー(nginx) と PHP を起動
+`lemp stop`    | Web サーバー(nginx) と PHP を停止
+`lemp restart` | Web サーバー(nginx) と PHP を再起動
+`lemp status`  | ステータスを表示
+
+*アドレスは、通常時と同じで、[workspace 名]-[ユーザー名]-c9users.io です。
 
 
 #### LEMP (NGINX, PHP-FPM 環境) **なし**で実行する
