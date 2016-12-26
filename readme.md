@@ -33,6 +33,10 @@ exit;
 
 ```
 
+#### Installing concrete5 via Brower is recommended (as of Dec 2016)
+
+In this script, it will NOT RUN command line install command at default since Cloud9 somehow ignores locale setting. As in Dec 2016, and version 8.0.3, I recommend you to install concrete5 via browser.
+
 #### Install LEMP
 
 The script also installs LEMP (nginx, php7 with php-fpm) and replace the original Apache. It will run concrete5 much faster.
@@ -151,7 +155,49 @@ FLUSH PRIVILEGES;
 exit;
 
 ```
-- 「instal.cloud9.bash」ファイルをテキストエディタで開いて `ADMIN_EMAIL` (自分のメールアドレス), `ADMIN_PASS` (admin ユーザーのパスワード) , `SITE_NAME` (サイト名) や他の設定情報を変更してください。下記に設定項目の説明があります。この Bash ファイルを、自分の GitHub のレポジトリや Gist などに保存するか、Cloud9 のファイルマネージャーに保存します。
+
+#### concrete5 インストールはブラウザで (2016年12月)
+
+このスクリプトはデフォルトでは、コマンドラインでの concrete5 インストールをしません。2016年12月 Version 8.0.3 現在、concrete5 がなぜかロケール情報が空白の状態でインストールされるからです。
+
+ブラウザからのインストールを実行してください。
+
+
+#### LEMP (NGINX, PHP-FPM 環境) をインストールして実行する
+
+このスクリプトでは LEMP (nginx, php7 with php-fpm) 環境をインストールし、既存の Apache 環境を書き換えます。最初のセットアップの時間はかかり、サーバーの希望がちょっとだけ面倒くさくなりますが、concrete5 の実行時間は早くなります。
+
+- `instal.cloud9.bash` スクリプトをダウンロードし、設定を変更してください。`ADMIN_EMAIL` (自分のメールアドレス), `ADMIN_PASS` (admin ユーザーのパスワード) , `SITE_NAME` (サイト名) や他の設定情報を変更してください。下記に設定項目の説明があります。この Bash ファイルを、自分の GitHub のレポジトリや Gist などに保存するか、Cloud9 のファイルマネージャーに保存します。
+- 下記のいずれかの方法でインストールを実行します。
+    - (1) ローカルにスクリプトを取得して内容を変更したあと実行する
+        - コマンドを実行してファイルを取得する。
+            - 例: `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash > install.cloud9.bash` 
+        - `install.cloud9.bash` ファイルを Cloud9 のテキストエディアで開いて、admin ユーザーのメールアドレス、パスワード、サイト名などを修正してください。
+        - 下記のコマンドを実行してインストールを実行する。
+            - `chmod 700 install.cloud9.bash`
+            - `bash install.cloud9.bash`
+    - (2) リモートに、内容を修正した `install.cloud9.bash` ファイルを保存し、それをを取得＆直接実行する
+        - 例: `curl https://raw.githubusercontent.com/katzueno/concrete5-install-shell-scripts/master/install.cloud9.bash | bash`
+- 完了
+
+**注意: パスワードは変えてください。** シェルスクリプトをプライベートレポジトリやシークレットGistなどに Fork することをお勧めします。
+
+**Cloud9 デフォルトのウェブサーバーから変更しているため、通常の START & STOP ボタンが働きません。**ウェブサーバーの操作は下記のコマンドを Bash ターミナルで打ち込んで頂く必要があります。
+
+
+コマンド       | 説明
+---------------|---------------------
+`lemp start`   | Starts Nginx and PHP
+`lemp stop`    | Stops Nginx and PHP
+`lemp restart` | Restarts Nginx and PHP
+`lemp status`  | Shows the current status
+
+
+#### LEMP (NGINX, PHP-FPM 環境) **なし**で実行する
+
+- `instal.cloud9.bash` スクリプトをダウンロードし、設定を変更してください
+    - `INSTALL_LEMP` オプションを`no`に変えてください.
+    - `ADMIN_EMAIL` (自分のメールアドレス), `ADMIN_PASS` (admin ユーザーのパスワード) , `SITE_NAME` (サイト名) や他の設定情報を変更してください。下記に設定項目の説明があります。この Bash ファイルを、自分の GitHub のレポジトリや Gist などに保存するか、Cloud9 のファイルマネージャーに保存します。
 - 下記のいずれかの方法でインストールを実行します。
     - (1) ローカルにスクリプトを取得して内容を変更したあと実行する
         - コマンドを実行してファイルを取得する。
