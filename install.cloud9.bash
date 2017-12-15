@@ -14,8 +14,8 @@
 # VARIABLES
 # ----------
 
-CONCRETE5_DOWNLOAD="http://www.concrete5.org/download_file/-/view/96959/8497/"
-CONCRETE5_VERSION="concrete5-8.2.1"
+CONCRETE5_DOWNLOAD="http://www.concrete5.org/download_file/-/view/99806/"
+CONCRETE5_VERSION="concrete5-8.3.0"
 DESTINATION="/home/ubuntu/workspace"
 CONCRETE_PHP_RAW="https://raw.githubusercontent.com/katzueno/cloud9-concrete5-install-script/master/config/cloud9.concrete.php"
 INSTALL_LEMP="no"
